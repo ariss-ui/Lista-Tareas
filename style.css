@@ -1,5 +1,80 @@
+/* resset */
+
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: Montserrat;
-  background-color: black;
-  color: whitesmoke;
+}
+
+/* Propiedades Personalizadas */
+:root {
+
+  /* Colores de Contenedores Principales */
+  --bg-body: #0f0520;
+  --bg-container: #2e1164;
+  
+  /* Espacios */
+  --space-l: 1rem;
+  --space-m: .8rem;
+  --space-s: .5rem;
+
+  /* Colores de Textos */
+  --text-primary: #ffffff;
+  --text-secondary: #9b9b9b;
+  
+  /* Bordes */
+  --border-container: #581fc2;
+  --border-radius: 4px;
+  --border-size: 2px:
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+
+  font-family: 'Raleway'  'Montserrat';
+  padding: var(--space-l);
+  background-color: var(--bg-body);
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+
+  width: 100%;
+  max-width: 640px;
+  height: fit-content;
+
+  padding: var(--space-m);
+
+  border-width: var(--border-size);
+  border-style: solid;
+  border-color: var(--border-container);
+
+  border-radius: var(--border-radius);
+  background-color: var(--bg-container);
+}
+
+.titulo {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.mensaje {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.tarea-entrada {
+  width: 100%;
+  font-size: 1rem;
+  padding: var(--space-l);
+  border-radius: var(--border-radius);
+  border: none;
+  
 }
