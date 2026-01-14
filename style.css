@@ -13,6 +13,9 @@
   /* Colores de Contenedores Principales */
   --bg-body: #0f0520;
   --bg-container: #2e1164;
+  --bg-container-counter: #190836;
+  --bg-task: #a189ca;
+  --bg-task-complete: #7c54c2;
   
   /* Espacios */
   --space-l: 1rem;
@@ -22,12 +25,28 @@
   /* Colores de Textos */
   --text-primary: #ffffff;
   --text-secondary: #9b9b9b;
+  --text-counter: #d1f6ff;
+
+  /* Color Botones */
+  --btn-add-color: #d4bcff;
+  --btn-add-color-hover: #635779;
+  --btn-hide-color: #a270ff;
+  --btn-hide-color-hover: #47316e;
+  --btn-remove-color: #8544ff;
+  --btn-remove-color-hover: #462386;
+
+  --btn-text-color: var(--bg-body);
+  --btn-text-color-hover: var(--text-primary);
   
   /* Bordes */
   --border-container: #581fc2;
-  --border-radius: 4px;
+  --border-radius: 8px;
   --border-size: 2px:
 
+  /* Iconos */
+  --icon-color: ;
+  --icon-color: #ffffff;
+  --icon-color-hover: #19083a;
 }
 
 body {
@@ -77,4 +96,126 @@ body {
   border-radius: var(--border-radius);
   border: none;
   
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-m);
+  width: 100%;
+}
+
+.boton {
+  padding: var(--space-m) var(--space-s);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--btn-text-color);
+}
+
+.boton:hover {
+  color: var(--btn-text-color-hover);
+  transition: 0.5s ease;
+}
+
+.boton-agregar {
+  color: var(--btn-text-color);
+  background-color: var(--btn-add-color);
+}
+
+.boton-agregar:hover {
+  background-color: var(--btn-add-color-hover);
+  transition: 0.5s ease;
+}
+
+.boton-ocultar {
+  color: var(--btn-text-color);
+  background-color: var(--btn-hide-color);
+}
+
+.boton-ocultar:hover {
+  background-color: var(--btn-hide-color-hover);
+  transition: 0.5s ease;
+}
+
+.boton-eliminar {
+  color: var(--btn-text-color);
+  background-color: var(--btn-remove-color);
+}
+
+.boton-eliminar:hover {
+  background-color: var(--btn-remove-color-hover);
+  transition: 0.5s ease;
+}
+
+.conteo-conteo {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-m);
+  padding: var(--space-m);
+  background-color: var(--bg-container-counter);
+  border: 1px solid var(--border-container);
+  border-radius: var(--border-radius);
+}
+
+.conteo-conteo p {
+  color: var(--text-counter);
+  font-size: .95rem;
+}
+
+.tareas-totales,
+.tareas-terminadas {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.contenedor-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+}
+
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: var(--space-m);
+  padding: var(--space-s) var(--space-m);
+
+  border-radius: var(--border-radius);
+
+  background-color: var(--bg-task);
+}
+
+.tarea-texto {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.tarea-iconos {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  display: flex;
+  gap: var(--space-m);
+
+}
+
+.tarea-iconos i {
+  font-size: 1.5rem;
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+.tarea-iconos i:hover {
+  color: var(--icon-color-hover);
+  transition: 0.3s ease;
+}
+
+.tarea-completada {
+  background-color: var(--bg-task-complete);
 }
