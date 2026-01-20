@@ -27,12 +27,15 @@
     <p class="mensaje">Escribe tu Próxima Tarea!</p>
     <input
     type="text"
+    id="tareaEntrada"
     class="tarea-entrada"
     placeholder="Ponte a chambear..."/>
     <!--  -->
     <div class="contenedor-botones">
-      <button class="boton boton-agregar">Crear Tarea</button>
+      <button class="boton boton-agregar" id="botonAgregar">Crear Tarea</button>
+
       <button class="boton boton-ocultar">Ocultar Completadas</button>
+
       <button class="boton boton-eliminar">Eliminar Completadas</button>
     </div>
     <!--  -->
@@ -41,7 +44,7 @@
     <p>Tareas Terminadas: <span class="tareas-terminadas">0</span></p>
   </div>
 
-  <div class="contenedor-tareas">
+  <div class="contenedor-tareas" id="contenedorTareas">
     <div class="tarea">
       <p class="tarea-texto">Estudiar para NO Reprobar</p>
       <div class="tarea-iconos">
